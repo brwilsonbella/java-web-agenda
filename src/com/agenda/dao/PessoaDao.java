@@ -71,5 +71,7 @@ public class PessoaDao {
 		}
 		
 	}
-
+ public void removerContatos(Pessoas pessoa) {
+    System.out.println("Método remover executado com sucesso");
+ }
 }
