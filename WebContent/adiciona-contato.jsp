@@ -71,7 +71,7 @@
 			</div>
 
 			<div class="form-group">
-				<label for="endereco">EndereÃ§o</label> <input type="text"
+				<label for="endereco">Endereço</label> <input type="text"
 					class="form-control" name='endereco' id="endereco"
 					placeholder="1234 Main St">
 			</div>

@@ -54,6 +54,7 @@
 				<th scope="col">E-mail</th>
 				<th scope="col">Endereço</th>
 				<th scope="col">Telefone</th>
+				<th scope="col">id</th>
 				<th scope="col">opções</th>
 			</tr>
 		</thead>
@@ -66,7 +67,8 @@
 				<td>${pessoa.email}</td>
 				<td>${pessoa.endereco}</td>
 				<td>${pessoa.telefone}</td>
-				<td><button type="button" class="btn btn-warning">Remover</button></td>
+				<td>${pessoa.id}</td>
+				<td><a href="remover-contato?id=${pessoa.id}" class="btn btn-warning">Remover</a></td>
 				
 			</tr>
 			</c:forEach>
