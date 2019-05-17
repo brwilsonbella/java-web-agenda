@@ -16,8 +16,7 @@ public class CadastroUsuarioService {
 
 	public CadastroUsuarioService() {
 		this.dao = new PessoaDao();
-		
-//		System.out.println(buscaPessoas());
+
 	}
 
 	public void adiciona(Pessoas pessoa) {
@@ -27,8 +26,14 @@ public class CadastroUsuarioService {
 	public List<Pessoas> buscaPessoas() {
 		return this.dao.buscaPessoas();
 	}
+
 	public void removerContatos(Pessoas pessoa) {
 		this.dao.removerContatos(pessoa);
-		
+
 	}
+
+	public void alterar(Pessoas pessoa) {
+		this.dao.alterar(pessoa);
+	}
+
 }

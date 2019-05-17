@@ -69,7 +69,11 @@
 				<td>${pessoa.telefone}</td>
 				<td>${pessoa.id}</td>
 				<td><a href="remover-contato?id=${pessoa.id}" class="btn btn-warning">Remover</a></td>
-				
+				<td><a href="adiciona_contato.jsp?id=${pessoa.id}
+				&nome=${pessoa.nome}
+				&endereco=${pessoa.endereco}
+				&email=${pessoa.email}
+				&telefone=${pessoa.telefone} " class="btn btn-warning">Editar</a></td>
 			</tr>
 			</c:forEach>
 			
@@ -77,7 +81,7 @@
 	</table>
 
 	<button id="button" type="button" class="btn btn-dark">
-		<a href="adiciona-contato.html">Voltar</a>
+		<a href="adiciona-contato.jsp">Voltar</a>
 	</button>
 </body>
 </html>

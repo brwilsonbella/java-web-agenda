@@ -17,26 +17,34 @@ public class CadastroUsuarioServlet extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+
 		request.setCharacterEncoding("UTF-8");
-	
-		
+
 		Pessoas pessoa = new Pessoas();
+
 		
+
 		pessoa.setNome(request.getParameter("nome"));
 		pessoa.setEmail(request.getParameter("email"));
 		pessoa.setSenha(request.getParameter("password"));
 		pessoa.setTelefone(request.getParameter("telefone"));
 		pessoa.setEndereco(request.getParameter("endereco"));
-	
+
 		CadastroUsuarioService service = new CadastroUsuarioService();
-		
+
 		service.cadastra(pessoa);
 		
+		CadastrarUsuarioService service = new cadastrarUsuarioService();
+		
+		if (null != request.getParameter("id") && !request.getParameter("id").equals(""))
+			service.alterar(pessoa);
+		pessoa.setId(Long.parseLong(request.getParameter("id").equals("")));
+	}else {
+		sevice.salvar(pessoa);
+			
+		}
+
 		response.sendRedirect("busca-contatos");
-		
-		
-		
 
 	}
 

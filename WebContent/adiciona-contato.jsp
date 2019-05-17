@@ -10,7 +10,7 @@
 <title>Agenda</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<a class="navbar-brand" href="#">Global</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
@@ -21,8 +21,8 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="index.html">Home
-						<span class="sr-only">(current)</span>
+				<li class="nav-item active"><a class="nav-link"
+					href="index.html">Home <span class="sr-only">(current)</span>
 				</a></li>
 				<li class="nav-item"><a class="nav-link" href="busca-contatos">Listar</a></li>
 				<li class="nav-item dropdown"><a
@@ -51,29 +51,28 @@
 			<div class="form-row">
 				<div class="form-group col-md-6">
 					<label for="nome">Nome</label> <input type="text"
-						class="form-control" id="nome" name='nome' placeholder="Nome">
+						value="${param.nome} " class="form-control" id="nome" name='nome'
+						placeholder="Nome">
 				</div>
-				<div class="form-group col-md-6">
-					<label for="password">Password</label> <input type="password"
-						name='password' class="form-control" id="password"
-						placeholder="Password">
-				</div>
+
 				<div class="form-group col-md-12">
 					<label for="email">Email</label> <input type="email"
-						class="form-control" id="email" name='email' placeholder="Email">
+						value="${param.email} " class="form-control" id="email"
+						name='email' placeholder="Email">
 				</div>
 			</div>
 
 			<div class="form-group">
 				<label for="telefone">Telefone</label> <input type="text"
-					class="form-control" data-mask="(99)9999-9999" name='telefone'
-					id="telefone" placeholder="Telefone">
+					value="${param.telefone }" class="form-control"
+					data-mask="(99)9999-9999" name='telefone' id="telefone"
+					placeholder="Telefone">
 			</div>
 
 			<div class="form-group">
 				<label for="endereco">Endereço</label> <input type="text"
-					class="form-control" name='endereco' id="endereco"
-					placeholder="1234 Main St">
+					value="${param.endereco }" class="form-control" name='endereco'
+					id="endereco" placeholder="1234 Main St">
 			</div>
 
 			<button type="submit" class="btn btn-dark">Enviar</button>
